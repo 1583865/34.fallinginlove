@@ -1,0 +1,68 @@
+<!DOCTYPE html><!-- 声明html5规范 -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8"><!--字符编码-->
+	<title>爱心飘落</title>
+	
+	<style>
+	body {
+		overflow: hidden;
+		margin: 0;
+		background: url('./img/2.jpg') no-repeat 0px 0px/2000px 800px;
+		
+	}
+		/*.snowfall-flakes*/
+		.snowfall-flakes {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			margin: 0px auto;
+			/*background-color: red;*/
+		}
+		.snowfall-flakes::before,.snowfall-flakes::after {
+			content: '';
+			background: red;
+			width: 20px;
+			height: 20px;
+			border-radius: 50px 50px 0 0;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		.snowfall-flakes::before{
+			transform: rotate(-62deg);
+		}
+		.snowfall-flakes::after {
+			transform: translateX(9px) rotate(64deg);
+		}
+		p {
+			font-size: 50px;
+			font-weight: 900;
+			margin-left: 600px;
+			 background:linear-gradient(to right, red, blue);
+			 /* 背景颜色渐变 */
+		             -webkit-background-clip: text;
+		           /*   背景剪辑  文本 */
+		              color: transparent;  
+		              /* 颜色透明度 */
+		}
+		<embed src="./诛仙2-山谷-小旭音乐-28390577.mp3" hidden="true"
+	autostart="true" loop="loop">
+	</style>
+</head>
+<body>
+	<audio autoplay="autoplay" height="100" width="100" loop="loop" hidden="true">
+		注：-1 一首播放完结束   loop  单曲循环
+	
+	  <source src="./诛仙2-山谷-小旭音乐-28390577.mp3" type="audio/mp3" />
+	
+	</audio> 
+	<p>诛仙2-山谷-小旭音乐</p>
+	
+<script  src="./js/jquery-1.2.6.min.js"></script>
+<script src="./js/snowfall.jquery.js"></script>
+<script>
+	$(document).snowfall({flakeCount : 50, maxSpeed: 6});
+ </script>
+</body>
+</html>
